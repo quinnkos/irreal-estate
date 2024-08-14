@@ -6,7 +6,9 @@
 - [About](#about)
   * [Description](#description)
   * [Usage](#usage)
-- [Installation Instructions](#installation-instructions-for-users)
+- [Installation](#installation)
+  * [Instructions for Users](#instructions-for-users)
+  * [Instructions for Developers](#instructions-for-developers)
 - [Future Additions](#future-additions)
 - [Known Issues](#known-issues)
 
@@ -38,7 +40,9 @@ Using the Property Profiler involves three steps:
 
 After completing these three steps, the user will be provided with the previously outlined information about their Minecraft house.
 
-## Installation Instructions for Users
+## Installation
+
+### Instructions for Users
 
 * If you haven't yet, install Minecraft Java Edition: https://www.minecraft.net/en-us/store/minecraft-java-bedrock-edition-pc
 * Install Minecraft Forge via the installer button under 'Download Recommended' (v. 1.20.6-50.1.0): https://files.minecraftforge.net/net/minecraftforge/forge/
@@ -51,6 +55,20 @@ After completing these three steps, the user will be provided with the previousl
 * Launch Minecraft. In 'Installations,' select the Forge installation, then press the 'Open Folder' icon to the right of the 'Play' button. In the window that pops up, locate the 'mods' folder (if this folder doesn't exist, create it). 
 * Add the JAR file to the 'mods' folder.
 * Press 'Play.' Once Minecraft has launched, click on the 'Mods' tab and load UnrealEstate.
+
+### Instructions for Developers
+
+* If you haven't yet, install the Java Development Kit (JDK): https://www.oracle.com/java/technologies/downloads/
+* Download the Minecraft UnrealEstate Mod ZIP file via the 'Code' button near the top of this page.
+* Decompress minecraft-unrealestate-mod-main.zip and open the resulting folder in your IDE
+* In the Terminal tab, run the following command:
+    ```
+    ./gradlew build
+    ```
+* Once the previous task has completed successfully, run the following command:
+    ```
+    ./gradlew runClient
+    ```
 
 ## Future Additions
 
