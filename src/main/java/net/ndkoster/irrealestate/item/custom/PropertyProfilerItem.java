@@ -326,7 +326,7 @@ public class PropertyProfilerItem extends Item {
         player.sendSystemMessage(Component.literal("Square Feet (House): " + sqftOfHouse +
                 " (" + blocksInHouse + " blocks)"));
         player.sendSystemMessage(Component.literal("Square Feet (Lot): " + sqftOfLot));
-        player.sendSystemMessage(Component.literal("Direction: " + houseFacing));
+        player.sendSystemMessage(Component.literal("Facing: " + houseFacing));
         player.sendSystemMessage(Component.literal("Furnished: " + (isFurnished ? "yes" : "no")));
         player.sendSystemMessage(Component.literal("Rooms: " + rooms));
         player.sendSystemMessage(Component.literal("Bedrooms: " + bedrooms));

@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "zillowmod:item/house"
+    "layer0": "irrealestate:item/book-with-house"
   }
 }
