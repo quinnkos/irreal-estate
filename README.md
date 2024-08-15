@@ -1,6 +1,14 @@
-# IrrealEstate: A Zillow-Inspired Minecraft Mod
+<div align="center">
+	<img src="images/IrrealEstateHeader.png">
+</div>
 
-![Screenshot](images/IrrealEstateSS.png)
+---
+
+<div align="center">
+    <img src="images/IrrealEstateSS.png">
+</div>
+
+---
 
 ## Table of Contents
 
