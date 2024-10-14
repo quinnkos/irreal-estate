@@ -83,12 +83,5 @@ After completing these three steps, the user will be provided with the previousl
 
 Below is a list of ideas in consideration for future versions of IrrealEstate:
 
-* Market value: a feature that assesses the market value of a home based on its characteristics (similar to Zillow's 'Zestimate' feature).
+* Market value: a feature that assesses the market value of a home based on its characteristics (similar to Zillow's 'Zestimate' feature) using real-world data. I have attempted to implement this feature but failed to find an adequate dataset (the best dataset I came across was still severely limited and I was unable to predict market value with considerable accuracy).
 * Incorporation into Survival Mode via Villager trades, land protection, etc.
-
-## Known Issues
-
-Below is a list of known issues with the mod. Please let me know if you encounter any bugs or logical errors that do not fall within the following categories: 
-
-* Passageways that do not contain doors or an elevation shift (e.g. woodland mansion room entrances) are not recognized as room entrances.
-* In special cases, the algorithm that traces the house's perimeter will not work as intended, either disallowing full traversal of the house or throwing an exception.
