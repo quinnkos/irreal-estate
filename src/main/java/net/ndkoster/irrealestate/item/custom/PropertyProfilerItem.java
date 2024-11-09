@@ -1,5 +1,6 @@
 package net.ndkoster.irrealestate.item.custom;
 
+import java.io.IOException;
 import java.util.*;
 
 import net.minecraft.world.level.block.*;
@@ -49,6 +50,7 @@ public class PropertyProfilerItem extends Item {
     static BlockPos origin;
     static Direction houseFacing;
     static List<BlockPos> perimeter;
+    static int price;
     static int sqftOfLot;
     static int blocksInHouse = 0;
     static int sqftOfHouse = 0;
@@ -89,7 +91,7 @@ public class PropertyProfilerItem extends Item {
                 maxXOfLot = Math.max(lotBounds.getFirst().getX(), lotBounds.getLast().getX());
                 minZOfLot = Math.min(lotBounds.getFirst().getZ(), lotBounds.getLast().getZ());
                 maxZOfLot = Math.max(lotBounds.getFirst().getZ(), lotBounds.getLast().getZ());
-                sqftOfLot = (int) (((maxXOfLot - minXOfLot + 1) * (maxZOfLot - minZOfLot +1)) * SQFT_MULTIPLIER);
+                sqftOfLot = (int) (((maxXOfLot - minXOfLot + 1) * (maxZOfLot - minZOfLot + 1)) * SQFT_MULTIPLIER);
             }
 
             //get block below front door
@@ -101,6 +103,7 @@ public class PropertyProfilerItem extends Item {
 
                     perimeter = tracePerimeter();
                     traverseHouse();
+                    getPriceEstimation();
                     printResults();
 
 
@@ -321,8 +324,14 @@ public class PropertyProfilerItem extends Item {
 
     }
 
+    private static void getPriceEstimation() throws IOException {
+        PythonIntegration pi = new PythonIntegration();
+        price = pi.callPricer(sqftOfHouse, bedrooms, isFurnished);
+    }
+
     private static void printResults() {
         player.sendSystemMessage(Component.literal("--------------------------------"));
+        player.sendSystemMessage(Component.literal("Price (est.): $" + price));
         player.sendSystemMessage(Component.literal("Square Feet (House): " + sqftOfHouse +
                 " (" + blocksInHouse + " blocks)"));
         player.sendSystemMessage(Component.literal("Square Feet (Lot): " + sqftOfLot));
