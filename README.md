@@ -15,6 +15,7 @@
 - [About the Project](#about)
   * [Description](#description)
   * [Usage](#usage)
+  * [Acknowledgments](#acknowledgements)
 - [Installation Instructions](#installation)
   * [Prerequisites](#prerequisites)
   * [Instructions for Users](#instructions-for-users)
