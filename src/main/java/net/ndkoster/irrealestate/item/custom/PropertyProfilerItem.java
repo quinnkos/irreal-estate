@@ -326,7 +326,7 @@ public class PropertyProfilerItem extends Item {
 
     private static void getPriceEstimation() throws IOException {
         PythonIntegration pi = new PythonIntegration();
-        price = pi.callPricer(sqftOfHouse, bedrooms, isFurnished);
+        price = pi.callPricer(bedrooms, sqftOfHouse, sqftOfLot);
     }
 
     private static void printResults() {
