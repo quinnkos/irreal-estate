@@ -55,7 +55,7 @@ After completing these three steps, the user will be provided with the previousl
 This project uses the **[USA House Prices]** dataset, which is licensed under the [Apache License 2.0](https://www.apache.org/licenses/LICENSE-2.0).  
 
 - **Source:** https://www.kaggle.com/datasets/fratzcan/usa-house-prices/data
-- **Author:** [Fırat Özcan]
+- **Author:** Fırat Özcan
 
 ## Installation
 
