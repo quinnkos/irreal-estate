@@ -3,6 +3,7 @@ import numpy as np
 import sys
 import os
 from sklearn.model_selection import train_test_split
+from sklearn.preprocessing import StandardScaler
 from sklearn.linear_model import LinearRegression
 #from sklearn.ensemble import RandomForestRegressor, GradientBoostingRegressor, VotingRegressor
 from sklearn.metrics import mean_squared_error, mean_absolute_error, r2_score
@@ -26,6 +27,11 @@ X = df[['bedrooms', 'sqft_living', 'sqft_lot']]
 y = df['price']
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
+# Normalize features
+scaler = StandardScaler()
+X_train = scaler.fit_transform(X_train)
+X_test = scaler.transform(X_test)
+
 model = LinearRegression()
 model.fit(X_train, y_train)
 y_pred = model.predict(X_test)
@@ -47,9 +53,10 @@ print(f"Mean House Price: {mean_house_price:.4f}\n"
 # Predict price on unseen (input) data
 def predict_price(bedrooms, sqft_living, sqft_lot) -> int:
     house_data = np.array([[bedrooms, sqft_living, sqft_lot]])
+    house_data = scaler.transform(house_data)
     price = model.predict(house_data)
 
-    return price[0]
+    return int(price[0])
 
 
 wd = os.getcwd()
