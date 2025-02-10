@@ -11,7 +11,7 @@ import xgboost as xgb
 import warnings
 warnings.filterwarnings('ignore')
 
-df = pd.read_csv("price-prediction/house_prices.csv")
+df = pd.read_csv("price-prediction/USA_house_prices.csv")
 df = df[['date', 'price', 'bedrooms', 'sqft_living', 'sqft_lot']]
 
 # Adjust prices for inflation
