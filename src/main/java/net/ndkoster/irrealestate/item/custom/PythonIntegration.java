@@ -7,12 +7,12 @@ import java.io.InputStreamReader;
 
 public class PythonIntegration {
 
-    public int callPricer(int sqftOfHouse, int bedrooms, boolean isFurnished) throws IOException {
+    public int callPricer(int bedrooms, int sqftOfHouse, int sqftOfLot) throws IOException {
 
         String[] args = {
-                Integer.toString(sqftOfHouse),
                 Integer.toString(bedrooms),
-                Boolean.toString(isFurnished)
+                Integer.toString(sqftOfHouse),
+                Integer.toString(sqftOfLot)
         };
 
         ProcessBuilder pb = new ProcessBuilder("python3",
