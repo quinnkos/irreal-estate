@@ -20,8 +20,6 @@
   * [Prerequisites](#prerequisites)
   * [Instructions for Users](#instructions-for-users)
   * [Instructions for Developers](#instructions-for-developers)
-- [Future Additions](#future-additions)
-- [Known Issues](#known-issues)
 
 ## About
 
@@ -86,10 +84,3 @@ This project uses the **USA House Prices** dataset, which is licensed under the 
 * Download the IrrealEstate ZIP file via the 'Code' button near the top of this page.
 * Decompress the ZIP file and open the resulting folder in your IDE.
 * To launch Minecraft Forge, navigate to Gradle -> Tasks -> forgegradle runs -> runClient (in IntelliJ IDEA, the Gradle icon is located in the top right).
-
-## Future Additions
-
-Below is a list of ideas in consideration for future versions of IrrealEstate:
-
-* Market value: a feature that assesses the market value of a home based on its characteristics (similar to Zillow's 'Zestimate' feature) using real-world data. I have attempted to implement this feature but failed to find an adequate dataset (the best dataset I came across was still severely limited and I was unable to predict market value with considerable accuracy).
-* Incorporation into Survival Mode via Villager trades, land protection, etc.
